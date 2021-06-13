@@ -1,81 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+ import React from 'react'
+import './homepage.styles.scss';
+import HeaderContainer from '../../components/header/Header.container';
+import {Link} from 'react-router-dom';
 
-<head>
-    <!-- basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
-    <title>Tea Co</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- title Link -->
-    <link rel = "icon" href ="./images/icons8-tea-64.png" type = "image/x-icon">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <!-- Tweaks for older IEs-->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-</head>
-<!-- body -->
-
-<body class="main-layout">
-    <!-- loader  -->
-    <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-    </div>
-    <!-- end loader -->
-    <!-- header -->
-    <header id="home">
-        <!-- header inner -->
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                        <div class="full">
-                            <div class="center-desk">
-                                <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="menu-area">
-                            <div class="limit-box">
-                                <nav class="main-menu">
-                                    <ul class="menu-area-main">
-                                        <li class="active"><a href="#home">Home</a></li>
-                                        <li><a href="#about">About Us</a></li>
-                                        <li><a href="#OurTeas">Our Tea</a></li>
-                                        <li><a href="#Gifts">Gift</a></li>
-                                        <li><a href="#product">Tea Related Product</a></li>
-                                        <li><a href="#blog">Blog</a></li>
-                                        <li><a href="#contact">Contact Us</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end header inner -->
-    </header>
-    <!-- end header -->
-
-
+class Homepage extends React.Component {
+    componentDidMount(){
+       let myIndex = 0;
+        carousel();
+    
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("slide_img");
+          for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1} 
+          if( x[myIndex-1]){
+            x[myIndex-1].style.display = "block";  
+          }  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+}
+      
+    render(){
+        return (
+            <>
+            <HeaderContainer/>
+<div class="main-layout">
     <section class="slider_section">
         <div class="container">
             <div class="row">
@@ -83,8 +35,7 @@
                     <div class="full">
                         <h1>Tea Co.</h1>
                             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-                            <!-- <div class="button_section"><a class="main_bt" href="#">Buy Now</a></div> -->
-                    </div>
+                   </div>
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3">
@@ -99,7 +50,6 @@
         </div>
     </section>
 
-    <!-- about -->
     <div id="about" class="about layout_padding">
         <div class="container">
             <div class="row">
@@ -114,16 +64,14 @@
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="full margin_top_30">
-                        <!-- <a class="main_bt" href="#">Read More</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end about -->
-    <!-- section -->
+    <Link to='/product'>
     <div id="OurTeas" class="section dark_bg layout_padding">
-        <div class="container">
+        <div  class="container">
             <div class="row">
                <div class="col-md-12">
                     <div class="heading full text_align_center">
@@ -137,7 +85,7 @@
                         <img class="img-responsive" src="images/Our_Tea1.png" alt="#" />
                     </div>
                     <div class="full text_align_center">
-                        <h3 class="white_font">Silver Green Darjeeling Tea <br><strong class="theme_blue">Rs. 635.00</strong></h3>
+                        <h3 class="white_font">Silver Green Darjeeling Tea <br/><strong class="theme_blue">Rs. 635.00</strong></h3>
                     </div>   
                 </div>
                 <div class="col-md-4 margin_top_30">
@@ -145,7 +93,7 @@
                         <img class="img-responsive" src="images/OurTea2.png" alt="#" />
                     </div>
                     <div class="full text_align_center">
-                        <h3 class="white_font">Smoky sDarjeeling Tea<br><strong class="theme_blue">Rs. 435.00</strong></h3>
+                        <h3 class="white_font">Smoky sDarjeeling Tea<br/><strong class="theme_blue">Rs. 435.00</strong></h3>
                     </div>
                 </div>
                 <div class="col-md-4 margin_top_30">
@@ -153,14 +101,13 @@
                         <img class="img-responsive" src="images/OurTea3.png" alt="#" />
                     </div>
                     <div class="full text_align_center">
-                        <h3 class="white_font">First Flush Darjeeling Tea<br><strong class="theme_blue">Rs. 499.00</strong></h3>
+                        <h3 class="white_font">First Flush Darjeeling Tea<br/><strong class="theme_blue">Rs. 499.00</strong></h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end section -->
-    <!-- section -->
+    </Link>
     <div id="Gifts" class="section">
         <div class="container">
             <div class="row">
@@ -171,19 +118,15 @@
             <div class="row">
                <div class="col-md-6 margin_top_30">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing el sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure doloreprehenderin </p> 
-                    <!-- <div class="full margin_top_30">
-                        <a class="main_bt" href="#">Read More</a>
-                    </div> -->
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-3 padding_right_0">
-                        <img style="width: 250px;" src="images/SpecialDiscount.png" alt="#" />
+                        <img style={{width: '250px'}} src="images/SpecialDiscount.png" alt="#" />
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- secions  -->
     <div id="product" class="section margin_30">
         <div class="container">
             <div class="row">
@@ -201,9 +144,6 @@
             </div>
         </div>
     </div>
-    <!-- section end here -->
-    <!-- end section -->
-<!-- section -->
     <div id="blog" class="section dark_bg layout_padding">
         <div class="container">
             <div class="row">
@@ -215,59 +155,46 @@
             </div>
             <div class="row">
                <div class="col-md-4 margin_top_30">
-                    <div class="full" style="overflow: hidden;">
+                    <div class="full" style={{overflow: 'hidden'}}>
                     <div class="full bl">
                         <img class="img-responsive" src="images/blogImage1.jpg" alt="#" />
                     </div>
                     <div class="full blog_blue text_align_center">
-                        <h5 class="white_font">Post by David Mark 27/07/2019</h3>
+                        <h5 class="white_font">Post by David Mark 27/07/2019</h5>
                         <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
                     </div> 
                      </div>  
                 </div>
                 <div class="col-md-4 margin_top_30">
-                    <div class="full" style="overflow: hidden;">
+                    <div class="full" style={{overflow: 'hidden'}}>
                     <div class="full bl">
                         <img class="img-responsive" src="images/BlogImage2.jpg" alt="#" />
                     </div> 
                     <div class="full blog_blue text_align_center">
-                        <h5 class="white_font">Post by David Mark 27/07/2019</h3>
+                        <h5 class="white_font">Post by David Mark 27/07/2019</h5>
                         <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
                     </div>
                      </div>
                 </div>
                 <div class="col-md-4 margin_top_30">
-                    <div class="full" style="overflow: hidden;">
+                    <div class="full" style={{overflow: 'hidden'}}>
                     <div class="full bl">
                         <img class="img-responsive" src="images/BlogImage3.jpg" alt="#" />
                     </div> 
                     <div class="full blog_blue text_align_center">
-                        <h5 class="white_font">Post by David Mark 27/07/2019</h3>
+                        <h5 class="white_font">Post by David Mark 27/07/2019</h5>
                         <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
                     </div>
                     </div>
                 </div>
-                <!-- <div class="col-md-4 margin_top_30">
-                    <div class="full" style="overflow: hidden;">
-                    <div class="full bl">
-                        <img class="img-responsive" src="images/BlogImage5.jpg" alt="#" />
-                    </div> 
-                    <div class="full blog_blue text_align_center">
-                        <h5 class="white_font">Post by David Mark 27/07/2019</h3>
-                        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor..</p>
-                    </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
-    <!-- end section -->
-    <!-- section -->
-    <div id="contact" class="section" style="padding: 10px 0px;">
+    <div id="contact" class="section" style={{padding: '10px 0px'}}>
         <div class="container-fluid">
             <div class="row">
              
-                <img style="padding: 20px;" class="col-md-6" src="images/ContactUS.jpg" alt="#" />
+                <img style={{padding: '20px'}} class="col-md-6" src="images/ContactUS.jpg" alt="#" />
                 
                <div class="col-md-6">
                 <div class="heading">
@@ -277,13 +204,13 @@
                         <form  onsubmit="alert('we have recived your request and rest assured we will call you back')">
                         <div class="row">
                             <div class="col-sm-12">
-                               <input class="form-control" placeholder="Your Name" type="text" required="">
+                               <input class="form-control" placeholder="Your Name" type="text" required=""/>
                             </div>
                             <div class="col-sm-12">
-                               <input class="form-control" placeholder="Email" type="Email" required="">
+                               <input class="form-control" placeholder="Email" type="Email" required=""/>
                             </div>
                             <div class="col-sm-12">
-                                <input class="form-control" placeholder="Phone" type="number" required="">
+                                <input class="form-control" placeholder="Phone" type="number" required=""/>
                             </div>
                             <div class="col-sm-12">
                                 <textarea class="form-control textarea" placeholder="Message"></textarea>
@@ -298,35 +225,17 @@
             </div>
         </div>
     </div>
-    <!-- end section -->
+                {/* <div className="homepage"> // when using noraml scss file
+                        <DirectoryMenu/>
+            </div> */}
+                {/* <HomePageContainer>
+                    <DirectoryMenu/>
+                </HomePageContainer> */}
 
-    <!-- footer -->
-    <footer>
-        <div class="footer layout_padding">
-            <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <h3>Contact Us</h3>
-                            <p>S.P. Jain Institute of Management and Research<br><br>(+91) 987 654 3210<br><br>demo@gmail.com</p>
-                        </div>
-                        <div class="col-lg-9 col-md-6 col-sm-12">
-                            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=700&amp;height=230&amp;hl=en&amp;q=S.P.jain&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.bgmi.org/">BGMI</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:230px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:230px;}.gmap_iframe {height:230px!important;}</style></div>
-                        </div>
-                    </div>
-            </div>
         </div>
-    </footer>
-    <!-- end footer -->
-    <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
+        </>
+        )
+    }
+}
 
-    <!-- sidebar -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-</body>
-
-</html>
+export default Homepage;

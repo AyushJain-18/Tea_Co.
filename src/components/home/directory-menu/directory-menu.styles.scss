@@ -1,0 +1,11 @@
+.directory-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (max-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)) ;
+  
+    }
+  }
