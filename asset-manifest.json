@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/.github.io/Tea_Co./static/css/main.dcc742c3.chunk.css",
+    "main.js": "/.github.io/Tea_Co./static/js/main.26ad3d35.chunk.js",
+    "main.js.map": "/.github.io/Tea_Co./static/js/main.26ad3d35.chunk.js.map",
+    "runtime-main.js": "/.github.io/Tea_Co./static/js/runtime-main.9f90ca98.js",
+    "runtime-main.js.map": "/.github.io/Tea_Co./static/js/runtime-main.9f90ca98.js.map",
+    "static/js/2.b244f337.chunk.js": "/.github.io/Tea_Co./static/js/2.b244f337.chunk.js",
+    "static/js/2.b244f337.chunk.js.map": "/.github.io/Tea_Co./static/js/2.b244f337.chunk.js.map",
+    "static/css/3.88ff2523.chunk.css": "/.github.io/Tea_Co./static/css/3.88ff2523.chunk.css",
+    "static/js/3.0a1f3c18.chunk.js": "/.github.io/Tea_Co./static/js/3.0a1f3c18.chunk.js",
+    "static/js/3.0a1f3c18.chunk.js.map": "/.github.io/Tea_Co./static/js/3.0a1f3c18.chunk.js.map",
+    "static/css/4.8c4847df.chunk.css": "/.github.io/Tea_Co./static/css/4.8c4847df.chunk.css",
+    "static/js/4.e196ec75.chunk.js": "/.github.io/Tea_Co./static/js/4.e196ec75.chunk.js",
+    "static/js/4.e196ec75.chunk.js.map": "/.github.io/Tea_Co./static/js/4.e196ec75.chunk.js.map",
+    "index.html": "/.github.io/Tea_Co./index.html",
+    "precache-manifest.1c6df5b4fd3e3b64082d123e83ffc983.js": "/.github.io/Tea_Co./precache-manifest.1c6df5b4fd3e3b64082d123e83ffc983.js",
+    "service-worker.js": "/.github.io/Tea_Co./service-worker.js",
+    "static/css/3.88ff2523.chunk.css.map": "/.github.io/Tea_Co./static/css/3.88ff2523.chunk.css.map",
+    "static/css/4.8c4847df.chunk.css.map": "/.github.io/Tea_Co./static/css/4.8c4847df.chunk.css.map",
+    "static/css/main.dcc742c3.chunk.css.map": "/.github.io/Tea_Co./static/css/main.dcc742c3.chunk.css.map",
+    "static/js/2.b244f337.chunk.js.LICENSE.txt": "/.github.io/Tea_Co./static/js/2.b244f337.chunk.js.LICENSE.txt",
+    "static/media/4.4 crown.svg.ed28accb.svg": "/.github.io/Tea_Co./static/media/4.4 crown.svg.ed28accb.svg",
+    "static/media/shopping-bag.svg": "/.github.io/Tea_Co./static/media/shopping-bag.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f90ca98.js",
+    "static/js/2.b244f337.chunk.js",
+    "static/css/main.dcc742c3.chunk.css",
+    "static/js/main.26ad3d35.chunk.js"
+  ]
+}
